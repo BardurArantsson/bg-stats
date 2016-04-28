@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baldur's Gate Trilogy Stats Calculator</title>
+
+    <link rel="stylesheet" href="bower_components/foundation-sites/dist/foundation-flex.min.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <style>
+      .text-muted {
+        opacity: 0.25;
+      }
+      .negative {
+        color: red;
+      }
+      .positive {
+        color: green;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div id="application">
+      <noscript>
+        This application requires JavaScript.
+      </noscript>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="./target/scala-2.11/bg-stats-jsdeps.js"></script>
+  <script type="text/javascript" src="./target/scala-2.11/bg-stats-opt.js"></script>
+
+  <!-- Boot application. -->
+  <script type="text/javascript">
+    bgstats.Boot().main();
+  </script>
+
+</html>
