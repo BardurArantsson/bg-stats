@@ -7,6 +7,13 @@ It's mainly intended as a small-but-not-quite trivial example of the
 use of [scalajs-react](https://github.com/japgolly/scalajs-react),
 [monifu](https://monix.io).
 
+## Live
+
+Here's the "live" version of the page:
+
+- [Optimized Version](https://bardurarantsson.github.io/bg-stats/)
+- [Development Version](https://bardurarantsson.github.io/bg-stats/index-dev.html)
+
 ## Building
 
 To get the fully optimized version, run
