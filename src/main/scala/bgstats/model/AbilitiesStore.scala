@@ -1,6 +1,6 @@
 package bgstats.model
 
-import monifu.reactive.Observable
+import monix.reactive.Observable
 
 trait AbilitiesStore extends AbilitiesCommands {
 

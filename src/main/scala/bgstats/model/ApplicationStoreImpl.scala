@@ -5,9 +5,8 @@ import bgstats.model.AbilityColumn.HellColumn
 import bgstats.model.AbilityColumn.MachineColumn
 import bgstats.model.AbilityColumn.TomesColumn
 import bgstats.model.ApplicationStore.State
-import monifu.concurrent.Scheduler
-import monifu.reactive.Observable
-
+import monix.execution.Scheduler
+import monix.reactive.Observable
 import scalaz.Monoid
 import scalaz.syntax.monoid._
 

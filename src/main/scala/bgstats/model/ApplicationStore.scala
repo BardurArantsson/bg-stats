@@ -1,7 +1,7 @@
 package bgstats.model
 
 import bgstats.model.ApplicationStore.State
-import monifu.reactive.Observable
+import monix.reactive.Observable
 
 trait ApplicationStore[M] extends AllCommands {
 

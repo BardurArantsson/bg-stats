@@ -1,21 +1,20 @@
 package bgstats.model
 
-import monifu.concurrent.Scheduler
-import monifu.reactive.OverflowStrategy
-import monifu.reactive.channels.BehaviorChannel
+import bgstats.monix_ext.Var
+import monix.execution.Scheduler
 
 class ChoicesStoreImpl(implicit scheduler: Scheduler) extends ChoicesStore with ChoicesCommands {
 
-  override val inputChoices$: BehaviorChannel[Choices] =
-    BehaviorChannel(
-      initial = Choices(
-        bg1Tomes = true,
-        machine = true,
-        dreamSacrifice = None,
-        trials = Trials.default),
-      strategy = OverflowStrategy.Unbounded)
+  private[this] val inputChoicesV: Var[Choices] = Var(
+    Choices(
+      bg1Tomes = true,
+      machine = true,
+      dreamSacrifice = None,
+      trials = Trials.default))
+
+  override val inputChoices$ = inputChoicesV.value$
 
   override def updateChoices(choices: Choices): Unit =
-    inputChoices$ := choices
+    inputChoicesV.set(choices)
 
 }

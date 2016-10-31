@@ -13,7 +13,7 @@ scalacOptions := Seq(
   "-Xfatal-warnings")
 
 libraryDependencies ++= Seq(
-  "org.monifu" %%% "monifu" % Version.monifu,
+  "io.monix" %%% "monix" % Version.monix,
   "org.scalaz" %%% "scalaz-core" % Version.scalaz,
   "com.github.japgolly.scalajs-react" %%% "core" % Version.scalaJsReact)
 

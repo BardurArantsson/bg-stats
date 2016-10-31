@@ -11,9 +11,8 @@ import bgstats.model.ChoicesStoreImpl
 import bgstats.ui.Application
 import japgolly.scalajs.react.ReactDOM
 import japgolly.scalajs.react.vdom.prefix_<^._
-import monifu.concurrent.Implicits.globalScheduler
+import monix.execution.Scheduler.Implicits.global
 import org.scalajs.dom.document
-
 import scala.scalajs.js.JSApp
 
 object Boot extends JSApp {
