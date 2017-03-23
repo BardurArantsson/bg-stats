@@ -1,15 +1,14 @@
 package bgstats.ui
 
 import bgstats.model.RenderedBreakpoint
-import japgolly.scalajs.react.ReactComponentC.ReqProps
-import japgolly.scalajs.react.{ReactComponentB, TopNode}
-import japgolly.scalajs.react.vdom.prefix_<^._
+import japgolly.scalajs.react.vdom.html_<^._
+import japgolly.scalajs.react.ScalaComponent
 
 object BreakpointsArea {
 
-  case class Props(renderedBreakpoints: Seq[RenderedBreakpoint[ReactTag]])
+  case class Props(renderedBreakpoints: Seq[RenderedBreakpoint[VdomTag]])
 
-  val Component: ReqProps[Props, _, _, TopNode] = ReactComponentB[Props]("BreakpointsArea")
+  val Component = ScalaComponent.builder[Props]("BreakpointsArea")
     .stateless
     .noBackend
     .render_P(props => {
@@ -30,7 +29,7 @@ object BreakpointsArea {
       <.div(
         <.h2("Breakpoints"),
         <.ul(
-          renderedBreakpoints))
+          renderedBreakpoints.toVdomArray))
     })
     .build
 

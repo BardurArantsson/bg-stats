@@ -2,16 +2,14 @@ package bgstats.ui
 
 import bgstats.model.AllCommands
 import bgstats.model.ApplicationStore
-import japgolly.scalajs.react.ReactComponentC.ReqProps
-import japgolly.scalajs.react.vdom.prefix_<^._
-import japgolly.scalajs.react.ReactComponentB
-import japgolly.scalajs.react.TopNode
+import japgolly.scalajs.react.vdom.html_<^._
+import japgolly.scalajs.react.ScalaComponent
 
 object Application {
 
-  case class Props(state: ApplicationStore.State[ReactTag])(val allCommands: AllCommands)
+  case class Props(state: ApplicationStore.State[VdomTag])(val allCommands: AllCommands)
 
-  val Component: ReqProps[Props, _, _, TopNode] = ReactComponentB[Props]("Application")
+  val Component = ScalaComponent.builder[Props]("Application")
     .stateless
     .noBackend
     .render($ => {

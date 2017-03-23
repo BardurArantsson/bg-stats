@@ -2,15 +2,16 @@ package bgstats.ui
 
 import bgstats.model.Abilities
 import bgstats.model.AbilitiesCommands
-import japgolly.scalajs.react.ReactComponentC.ReqProps
-import japgolly.scalajs.react.{ReactComponentB, TopNode}
-import japgolly.scalajs.react.vdom.prefix_<^._
+import japgolly.scalajs.react.CtorType
+import japgolly.scalajs.react.vdom.html_<^._
+import japgolly.scalajs.react.ScalaComponent
+import japgolly.scalajs.react.component.Scala.Component
 
 object AbilitiesArea {
 
   case class Props(abilities: Abilities)(val abilitiesCommands: AbilitiesCommands)
 
-  val Component: ReqProps[Props, _, _, TopNode] = ReactComponentB[Props]("AbilitiesArea")
+  val Component = ScalaComponent.builder[Props]("AbilitiesArea")
     .stateless
     .noBackend
     .render_P(props => {
@@ -30,11 +31,12 @@ object AbilitiesArea {
       <.fieldset(
         ^.className := "fieldset",
         <.legend("Abilities"),
-        renderedInputs,
+        renderedInputs.toVdomArray,
         AbilityRow.Component(
           AbilityRow.Props(
             label = "Total"
-          ),
+          )
+        )(
           <.div(
             <.b(abilities.total)
           )

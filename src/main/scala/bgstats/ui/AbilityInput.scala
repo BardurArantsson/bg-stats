@@ -2,9 +2,8 @@ package bgstats.ui
 
 import bgstats.model.Ability
 import japgolly.scalajs.react.Callback
-import japgolly.scalajs.react.ReactComponentC.ReqProps
-import japgolly.scalajs.react.{ReactComponentB, ReactEventI, TopNode}
-import japgolly.scalajs.react.vdom.prefix_<^._
+import japgolly.scalajs.react.{ReactEventFromInput, ScalaComponent}
+import japgolly.scalajs.react.vdom.html_<^._
 
 import scala.util.Try
 
@@ -15,13 +14,13 @@ object AbilityInput {
     value: Int,
     onChange: Int => Unit)
 
-  val Component: ReqProps[Props, _, _, TopNode] = ReactComponentB[Props]("AbilityInput")
+  val Component = ScalaComponent.builder[Props]("AbilityInput")
     .stateless
     .noBackend
     .render($ => {
       val props = $.props
       // Change callback
-      def changed(event: ReactEventI): Callback = Callback {
+      def changed(event: ReactEventFromInput): Callback = Callback {
         Try(event.target.value.toInt).toOption match {
           case Some(newValue) => props.onChange(newValue)
           case None           => () // ignore
@@ -31,7 +30,8 @@ object AbilityInput {
       AbilityRow.Component(
         AbilityRow.Props(
           label = props.ability.displayName
-        ),
+        )
+      )(
         <.div(
           <.input(
             ^.`type` := "number",

@@ -3,6 +3,6 @@ object Version {
   val react = "15.4.2"
   val monix = "2.2.2"
   val scalaz = "7.2.10"
-  val scalaJsReact = "0.11.2"
+  val scalaJsReact = "1.0.0-RC2"
 
 }

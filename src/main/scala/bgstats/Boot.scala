@@ -9,8 +9,7 @@ import bgstats.model.Breakpoint
 import bgstats.model.ChoicesStore
 import bgstats.model.ChoicesStoreImpl
 import bgstats.ui.Application
-import japgolly.scalajs.react.ReactDOM
-import japgolly.scalajs.react.vdom.prefix_<^._
+import japgolly.scalajs.react.vdom.html_<^._
 import monix.execution.Scheduler.Implicits.global
 import org.scalajs.dom.document
 import scala.scalajs.js.JSApp
@@ -20,7 +19,7 @@ object Boot extends JSApp {
   /**
    * Breakpoints for certain desirable items/effects.
    */
-  val breakpoints = Vector[Breakpoint[ReactTag]](
+  val breakpoints = Vector[Breakpoint[VdomTag]](
     Breakpoint(ability = INT, minimum = 16, message = <.span("for the Golem manual")),
     Breakpoint(ability = INT, minimum = 12, message = <.span("to survive 3 hits from Illithid ", <.b("with Potion of Intelligence"))),
     Breakpoint(ability = INT, minimum = 16, message = <.span("to survive 3 hits from Illithid")),
@@ -44,7 +43,7 @@ object Boot extends JSApp {
     // Set up all the stores
     val choicesStore: ChoicesStore = new ChoicesStoreImpl()
     val abilitiesStore: AbilitiesStore = new AbilitiesStoreImpl()
-    val applicationStore: ApplicationStore[ReactTag] = new ApplicationStoreImpl(
+    val applicationStore: ApplicationStore[VdomTag] = new ApplicationStoreImpl(
       breakpoints = breakpoints,
       abilitiesStore = abilitiesStore,
       choicesStore = choicesStore)
@@ -53,7 +52,7 @@ object Boot extends JSApp {
       val application =
         Application.Component(
           Application.Props(view)(applicationStore))
-      ReactDOM.render(application, document.getElementById("application"))
+      application.renderIntoDOM(document.getElementById("application"))
     }
   }
 

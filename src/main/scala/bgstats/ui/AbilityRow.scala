@@ -1,14 +1,13 @@
 package bgstats.ui
 
-import japgolly.scalajs.react.ReactComponentC.ReqProps
-import japgolly.scalajs.react.{TopNode, ReactComponentB}
-import japgolly.scalajs.react.vdom.prefix_<^._
+import japgolly.scalajs.react.ScalaComponent
+import japgolly.scalajs.react.vdom.html_<^._
 
 object AbilityRow {
 
   case class Props(label: String)
 
-  val Component: ReqProps[Props, _, _, TopNode] = ReactComponentB[Props]("AbilityRow")
+  val Component = ScalaComponent.builder[Props]("AbilityRow")
     .stateless
     .noBackend
     .renderPC((_, props, children) => {

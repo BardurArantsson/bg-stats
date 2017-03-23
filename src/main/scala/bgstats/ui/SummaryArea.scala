@@ -1,9 +1,8 @@
 package bgstats.ui
 
 import bgstats.model.{Choices, Abilities}
-import japgolly.scalajs.react.ReactComponentC.ReqProps
-import japgolly.scalajs.react.{ReactComponentB, TopNode}
-import japgolly.scalajs.react.vdom.prefix_<^._
+import japgolly.scalajs.react.ScalaComponent
+import japgolly.scalajs.react.vdom.html_<^._
 
 object SummaryArea {
 
@@ -18,7 +17,7 @@ object SummaryArea {
   private[this] def renderAbilities(abilities: Abilities): TagMod = {
     abilities.sortedValues.map { case (ability, value) =>
       s"$indent${ability.displayName}: $value\n"
-    }
+    }.toTagMod
   }
 
   private[this] def renderChoices(choices: Choices): TagMod = {
@@ -27,7 +26,7 @@ object SummaryArea {
       s"${indent}Collect BG1 Tomes: ${renderBoolean(bg1Tomes)}\n",
       s"${indent}Use MoLtM: ${renderBoolean(machine)}\n",
       s"${indent}Dream Sacrifice: ${dreamSacrifice.getOrElse("-")}\n"
-    )
+    ).toTagMod
   }
 
   private[this] def renderTrials(choices: Choices): TagMod = {
@@ -38,10 +37,10 @@ object SummaryArea {
       s"${indent}Greed: $greed\n",
       s"${indent}Pride: $pride\n",
       s"${indent}Selfish: $selfish\n"
-    )
+    ).toTagMod
   }
 
-  val Component: ReqProps[Props, _, _, TopNode] = ReactComponentB[Props]("SummaryArea")
+  val Component = ScalaComponent.builder[Props]("SummaryArea")
     .stateless
     .noBackend
     .render($ => {

@@ -4,15 +4,14 @@ import bgstats.model.ChoicesCommands
 import bgstats.model.Trials
 import bgstats.model.Choices
 import japgolly.scalajs.react.Callback
-import japgolly.scalajs.react.ReactComponentC.ReqProps
-import japgolly.scalajs.react.{ReactEventI, ReactComponentB, TopNode}
-import japgolly.scalajs.react.vdom.prefix_<^._
+import japgolly.scalajs.react.{ReactEventFromInput, ScalaComponent}
+import japgolly.scalajs.react.vdom.html_<^._
 
 object ChoicesArea {
 
   case class Props(choices: Choices)(val choicesCommands: ChoicesCommands)
 
-  val Component: ReqProps[Props, _, _, TopNode] = ReactComponentB[Props]("ChoicesArea")
+  val Component = ScalaComponent.builder[Props]("ChoicesArea")
     .stateless
     .noBackend
     .render($ => {
@@ -30,7 +29,7 @@ object ChoicesArea {
             <.input(
               ^.`type` := "checkbox",
               ^.checked := props.choices.bg1Tomes,
-              ^.onChange ==> ((e: ReactEventI) => updateChoices(_.copy(bg1Tomes = e.target.checked)))),
+              ^.onChange ==> ((e: ReactEventFromInput) => updateChoices(_.copy(bg1Tomes = e.target.checked)))),
             "Collect all BG1 Tomes"))
       // Render the MoLtM choice
       val moltmChoice =
@@ -39,7 +38,7 @@ object ChoicesArea {
             <.input(
               ^.`type` := "checkbox",
               ^.checked := props.choices.machine,
-              ^.onChange ==> ((e: ReactEventI) => updateChoices(_.copy(machine = e.target.checked)))),
+              ^.onChange ==> ((e: ReactEventFromInput) => updateChoices(_.copy(machine = e.target.checked)))),
             "Use Machine of Lum the Mad"))
       // Render the Wrath trial choice
       val wrathChoice =

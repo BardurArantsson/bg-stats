@@ -6,9 +6,8 @@ import bgstats.model.AbilityColumn.HellColumn
 import bgstats.model.AbilityColumn.MachineColumn
 import bgstats.model.AbilityColumn.TomesColumn
 import bgstats.model.{Effects, SummaryAbilities}
-import japgolly.scalajs.react.ReactComponentC.ReqProps
-import japgolly.scalajs.react.vdom.prefix_<^._
-import japgolly.scalajs.react.{ReactComponentB, ReactNode, TopNode}
+import japgolly.scalajs.react.vdom.html_<^._
+import japgolly.scalajs.react.ScalaComponent
 
 object TotalsArea {
 
@@ -25,7 +24,7 @@ object TotalsArea {
       case TomesColumn => "BG1 Tomes"
     }
 
-  private[this] def numberToString(i: Int): ReactTag =
+  private[this] def numberToString(i: Int): VdomTag =
     if (i == 0) {
       <.span("-")
     } else if (i < 0) {
@@ -34,13 +33,13 @@ object TotalsArea {
       <.span(^.className := "positive", i)
     }
 
-  private[this] def row(label: String, columns: Vector[ReactTag]): ReactNode = {
+  private[this] def row(label: String, columns: Vector[VdomTag]): VdomNode = {
     <.tr(
       <.td(<.p(^.textAlign := "center", label)),
-      columns.map(c => <.td(<.p(^.className := "text-center", c))))
+      columns.map(c => <.td(<.p(^.className := "text-center", c))).toVdomArray)
   }
 
-  val Component: ReqProps[Props, _, _, TopNode] = ReactComponentB[Props]("TotalsArea")
+  val Component = ScalaComponent.builder[Props]("TotalsArea")
     .stateless
     .noBackend
     .render_P(props => {
@@ -54,7 +53,7 @@ object TotalsArea {
           <.th(<.p(^.textAlign := "center", k))
         }
         // Prepend an empty heading and wrap up in row
-        <.tr(Vector(<.th()) ++ headingColumns)
+        <.tr((Vector(<.th()) ++ headingColumns).toVdomArray)
       }
       // Render rows for the table body
       val bodyRows = {
@@ -88,7 +87,7 @@ object TotalsArea {
               headingRow
             ),
             <.tbody(
-              bodyRows
+              bodyRows.toVdomArray
             )
           )
         ),
@@ -96,7 +95,7 @@ object TotalsArea {
           <.h2("Effects"),
           <.ul(
             ^.className := "square",
-            effects)))
+            effects.toVdomArray)))
     })
     .build
 
