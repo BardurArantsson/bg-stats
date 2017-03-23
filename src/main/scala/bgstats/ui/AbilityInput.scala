@@ -2,7 +2,10 @@ package bgstats.ui
 
 import bgstats.model.Ability
 import japgolly.scalajs.react.Callback
-import japgolly.scalajs.react.{ReactEventFromInput, ScalaComponent}
+import japgolly.scalajs.react.CtorType
+import japgolly.scalajs.react.component.ScalaFn
+import japgolly.scalajs.react.ReactEventFromInput
+import japgolly.scalajs.react.component.ScalaFn.Component
 import japgolly.scalajs.react.vdom.html_<^._
 
 import scala.util.Try
@@ -14,11 +17,8 @@ object AbilityInput {
     value: Int,
     onChange: Int => Unit)
 
-  val Component = ScalaComponent.builder[Props]("AbilityInput")
-    .stateless
-    .noBackend
-    .render($ => {
-      val props = $.props
+  val Component: Component[Props, CtorType.Props] = ScalaFn[Props](
+    props => {
       // Change callback
       def changed(event: ReactEventFromInput): Callback = Callback {
         Try(event.target.value.toInt).toOption match {
@@ -41,7 +41,7 @@ object AbilityInput {
           )
         )
       )
-    })
-    .build
+    }
+  )
 
 }

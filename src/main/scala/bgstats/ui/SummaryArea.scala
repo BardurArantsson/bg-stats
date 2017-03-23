@@ -1,7 +1,7 @@
 package bgstats.ui
 
-import bgstats.model.{Choices, Abilities}
-import japgolly.scalajs.react.ScalaComponent
+import bgstats.model.{Abilities, Choices}
+import japgolly.scalajs.react.component.ScalaFn
 import japgolly.scalajs.react.vdom.html_<^._
 
 object SummaryArea {
@@ -40,11 +40,8 @@ object SummaryArea {
     ).toTagMod
   }
 
-  val Component = ScalaComponent.builder[Props]("SummaryArea")
-    .stateless
-    .noBackend
-    .render($ => {
-      val p = $.props
+  val Component = ScalaFn[Props](
+    p => {
       <.div(
         <.h2("Summary"),
         <.pre(
@@ -58,7 +55,7 @@ object SummaryArea {
           renderTrials(p.choices)
         )
       )
-    })
-    .build
+    }
+  )
 
 }

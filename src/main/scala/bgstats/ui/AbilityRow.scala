@@ -1,16 +1,16 @@
 package bgstats.ui
 
-import japgolly.scalajs.react.ScalaComponent
+import japgolly.scalajs.react.CtorType
+import japgolly.scalajs.react.component.ScalaFn
+import japgolly.scalajs.react.component.ScalaFn.Component
 import japgolly.scalajs.react.vdom.html_<^._
 
 object AbilityRow {
 
   case class Props(label: String)
 
-  val Component = ScalaComponent.builder[Props]("AbilityRow")
-    .stateless
-    .noBackend
-    .renderPC((_, props, children) => {
+  val Component: Component[Props, CtorType.PropsAndChildren] = ScalaFn.withChildren[Props](
+    (props, children) => {
       <.div(
         ^.className := "row",
         <.div(
@@ -26,7 +26,7 @@ object AbilityRow {
           children
         )
       )
-    })
-    .build
+    }
+  )
 
 }

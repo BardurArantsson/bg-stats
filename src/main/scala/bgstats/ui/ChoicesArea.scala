@@ -4,18 +4,18 @@ import bgstats.model.ChoicesCommands
 import bgstats.model.Trials
 import bgstats.model.Choices
 import japgolly.scalajs.react.Callback
-import japgolly.scalajs.react.{ReactEventFromInput, ScalaComponent}
+import japgolly.scalajs.react.CtorType
+import japgolly.scalajs.react.component.ScalaFn
+import japgolly.scalajs.react.component.ScalaFn.Component
+import japgolly.scalajs.react.ReactEventFromInput
 import japgolly.scalajs.react.vdom.html_<^._
 
 object ChoicesArea {
 
   case class Props(choices: Choices)(val choicesCommands: ChoicesCommands)
 
-  val Component = ScalaComponent.builder[Props]("ChoicesArea")
-    .stateless
-    .noBackend
-    .render($ => {
-      val props = $.props
+  val Component: Component[Props, CtorType.Props] = ScalaFn[Props](
+    props => {
       // Generic functions for updating choices and trials
       def updateChoices(f: Choices => Choices): Callback = Callback {
         props.choicesCommands.updateChoices(f(props.choices))
@@ -110,7 +110,7 @@ object ChoicesArea {
           )
         )
       )
-    })
-    .build
+    }
+  )
 
 }

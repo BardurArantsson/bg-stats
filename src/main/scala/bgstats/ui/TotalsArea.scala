@@ -6,8 +6,10 @@ import bgstats.model.AbilityColumn.HellColumn
 import bgstats.model.AbilityColumn.MachineColumn
 import bgstats.model.AbilityColumn.TomesColumn
 import bgstats.model.{Effects, SummaryAbilities}
+import japgolly.scalajs.react.CtorType
 import japgolly.scalajs.react.vdom.html_<^._
-import japgolly.scalajs.react.ScalaComponent
+import japgolly.scalajs.react.component.ScalaFn
+import japgolly.scalajs.react.component.ScalaFn.Component
 
 object TotalsArea {
 
@@ -39,10 +41,8 @@ object TotalsArea {
       columns.map(c => <.td(<.p(^.className := "text-center", c))).toVdomArray)
   }
 
-  val Component = ScalaComponent.builder[Props]("TotalsArea")
-    .stateless
-    .noBackend
-    .render_P(props => {
+  val Component: Component[Props, CtorType.Props] = ScalaFn[Props](
+    props => {
       // Stick all the columns together
       val columns: Vector[(String, SummaryAbilities)] =
         Vector("Base" -> props.baseSummaryAbilities) ++
@@ -96,7 +96,7 @@ object TotalsArea {
           <.ul(
             ^.className := "square",
             effects.toVdomArray)))
-    })
-    .build
+    }
+  )
 
 }

@@ -3,21 +3,21 @@ package bgstats.ui
 import bgstats.model.Ability
 import bgstats.model.Ability._
 import japgolly.scalajs.react.Callback
+import japgolly.scalajs.react.CtorType
+import japgolly.scalajs.react.component.ScalaFn
 import japgolly.scalajs.react.vdom.html_<^._
-import japgolly.scalajs.react.{ReactEventFromInput, ScalaComponent}
+import japgolly.scalajs.react.ReactEventFromInput
+import japgolly.scalajs.react.component.ScalaFn.Component
 
 object DreamSacrifice {
 
   case class Props(name: String, dreamSacrifice: Option[Ability], onChange: Option[Ability] => Callback)
 
-  val Component = ScalaComponent.builder[Props]("DreamSacrifice")
-    .stateless
-    .noBackend
-    .render($ => {
-      val props = $.props
+  val Component: Component[Props, CtorType.Props] = ScalaFn[Props](
+    props => {
       // Selection event handler
       def onSelected(event: ReactEventFromInput): Callback =
-        $.props.onChange(Ability.fromString(event.target.value))
+        props.onChange(Ability.fromString(event.target.value))
       // Render a single selector
       def selector(label: String, value: Option[Ability]): VdomArray = {
         val id = s"sacrifice-$label"
@@ -44,7 +44,7 @@ object DreamSacrifice {
         selector(label = "INT", value = Some(INT)),
         selector(label = "WIS", value = Some(WIS))
       )
-    })
-    .build
+    }
+  )
 
 }

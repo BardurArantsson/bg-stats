@@ -2,19 +2,19 @@ package bgstats.ui
 
 import bgstats.model.AllCommands
 import bgstats.model.ApplicationStore
+import japgolly.scalajs.react.CtorType
+import japgolly.scalajs.react.component.ScalaFn
+import japgolly.scalajs.react.component.ScalaFn.Component
 import japgolly.scalajs.react.vdom.html_<^._
-import japgolly.scalajs.react.ScalaComponent
 
 object Application {
 
   case class Props(state: ApplicationStore.State[VdomTag])(val allCommands: AllCommands)
 
-  val Component = ScalaComponent.builder[Props]("Application")
-    .stateless
-    .noBackend
-    .render($ => {
-      val state = $.props.state
-      val commands = $.props.allCommands
+  val Component: Component[Props, CtorType.Props] = ScalaFn[Props](
+    props => {
+      val state = props.state
+      val commands = props.allCommands
       <.div(
         <.div(
           ^.className := "row",
@@ -76,7 +76,7 @@ object Application {
           )
         )
       )
-    })
-    .build
+    }
+  )
 
 }

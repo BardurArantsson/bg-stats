@@ -4,17 +4,14 @@ import bgstats.model.Abilities
 import bgstats.model.AbilitiesCommands
 import japgolly.scalajs.react.CtorType
 import japgolly.scalajs.react.vdom.html_<^._
-import japgolly.scalajs.react.ScalaComponent
-import japgolly.scalajs.react.component.Scala.Component
+import japgolly.scalajs.react.component.ScalaFn
 
 object AbilitiesArea {
 
   case class Props(abilities: Abilities)(val abilitiesCommands: AbilitiesCommands)
 
-  val Component = ScalaComponent.builder[Props]("AbilitiesArea")
-    .stateless
-    .noBackend
-    .render_P(props => {
+  val Component: ScalaFn.Component[Props, CtorType.Props] = ScalaFn[Props](
+    props => {
       import props._
       // Generate the inputs for each of the abilities
       val renderedInputs = abilities.sortedValues.map { case (k, value) =>
@@ -42,7 +39,7 @@ object AbilitiesArea {
           )
         )
       )
-    })
-    .build
+    }
+  )
 
 }

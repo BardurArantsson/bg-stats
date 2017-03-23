@@ -1,17 +1,17 @@
 package bgstats.ui
 
 import bgstats.model.RenderedBreakpoint
+import japgolly.scalajs.react.CtorType
 import japgolly.scalajs.react.vdom.html_<^._
-import japgolly.scalajs.react.ScalaComponent
+import japgolly.scalajs.react.component.ScalaFn
+import japgolly.scalajs.react.component.ScalaFn.Component
 
 object BreakpointsArea {
 
   case class Props(renderedBreakpoints: Seq[RenderedBreakpoint[VdomTag]])
 
-  val Component = ScalaComponent.builder[Props]("BreakpointsArea")
-    .stateless
-    .noBackend
-    .render_P(props => {
+  val Component: Component[Props, CtorType.Props] = ScalaFn[Props](
+    props => {
       // Render the list of breakpoints.
       val renderedBreakpoints = props.renderedBreakpoints.map { renderedBreakpoint =>
         val breakpoint = renderedBreakpoint.breakpoint
@@ -30,7 +30,7 @@ object BreakpointsArea {
         <.h2("Breakpoints"),
         <.ul(
           renderedBreakpoints.toVdomArray))
-    })
-    .build
+    }
+  )
 
 }
