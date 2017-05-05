@@ -19,7 +19,7 @@ object Boot extends JSApp {
   /**
    * Breakpoints for certain desirable items/effects.
    */
-  val breakpoints = Vector[Breakpoint[VdomTag]](
+  private[this] val breakpoints = Vector[Breakpoint[VdomTag]](
     Breakpoint(ability = INT, minimum = 16, message = <.span("for the Golem manual")),
     Breakpoint(ability = INT, minimum = 12, message = <.span("to survive 3 hits from Illithid ", <.b("with Potion of Intelligence"))),
     Breakpoint(ability = INT, minimum = 16, message = <.span("to survive 3 hits from Illithid")),
