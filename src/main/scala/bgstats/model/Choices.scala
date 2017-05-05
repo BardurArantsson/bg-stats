@@ -11,9 +11,9 @@ import scalaz.Monoid
  */
 case class Choices(
   bg1Tomes: Boolean,
-  machine: Boolean = true,
-  dreamSacrifice: Option[Ability] = None,
-  trials: Trials = Trials.default) {
+  machine: Boolean,
+  dreamSacrifice: Option[Ability],
+  trials: Trials) {
 
   /**
    * Calculate the effects of the dream choice.
