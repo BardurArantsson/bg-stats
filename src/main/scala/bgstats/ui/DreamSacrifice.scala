@@ -23,6 +23,7 @@ object DreamSacrifice {
         val id = s"sacrifice-$label"
         Seq(
           <.input(
+            ^.key := "input",
             ^.id := id,
             ^.`type` := "radio",
             ^.name := props.name,
@@ -31,6 +32,7 @@ object DreamSacrifice {
             ^.onChange ==> onSelected
           ),
           <.label(
+            ^.key := "label",
             ^.htmlFor := id,
             label
           )

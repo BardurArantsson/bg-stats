@@ -14,6 +14,7 @@ object AbilityRow {
       <.div(
         ^.className := "row",
         <.div(
+          ^.key := "label",
           ^.className := "medium-4 columns",
           <.label(
             ^.className := "text-right",
@@ -22,6 +23,7 @@ object AbilityRow {
           )
         ),
         <.div(
+          ^.key := "control",
           ^.className := "medium-8 columns",
           children
         )

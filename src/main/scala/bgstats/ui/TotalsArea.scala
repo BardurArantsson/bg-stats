@@ -35,10 +35,17 @@ object TotalsArea {
       <.span(^.className := "positive", i)
     }
 
-  private[this] def row(label: String, columns: Vector[VdomTag]): VdomNode = {
+  private[this] def row(key: String, label: String, columns: Vector[VdomTag]): VdomNode = {
     <.tr(
+      ^.key := label,
       <.td(<.p(^.textAlign := "center", label)),
-      columns.map(c => <.td(<.p(^.className := "text-center", c))).toVdomArray)
+      columns.zipWithIndex.map { case (c, i) =>
+        <.td(
+          ^.key := i,
+          <.p(^.className := "text-center", c)
+        )
+      }.toVdomArray
+    )
   }
 
   val Component: Component[Props, CtorType.Props] = ScalaFn[Props](
@@ -49,11 +56,13 @@ object TotalsArea {
           props.deltaColumns.map(dc => (columnDisplayName(dc._1), dc._2.deltaSummaryAbilities)) :+ ("Total" -> props.totalsColumn)
       // Render column headings
       val headingRow = {
-        val headingColumns = columns.map { case (k, _) =>
-          <.th(<.p(^.textAlign := "center", k))
+        val headingColumns = columns.zipWithIndex.map { case ((k, _), i) =>
+          <.th(
+            ^.key := i,
+            <.p(^.textAlign := "center", k))
         }
         // Prepend an empty heading and wrap up in row
-        <.tr((Vector(<.th()) ++ headingColumns).toVdomArray)
+        <.tr((Vector(<.th(^.key := "empty")) ++ headingColumns).toVdomArray)
       }
       // Render rows for the table body
       val bodyRows = {
@@ -66,17 +75,24 @@ object TotalsArea {
             column.abilities.values.get(ability).map(numberToString).getOrElse(<.span("-"))
           }
           // Row done
-          row(ability.displayName, renderedColumns)
+          row(
+            key = ability.displayName,
+            label = ability.displayName,
+            columns = renderedColumns)
         }
         // Magic resistance
-        val magicResistanceRow = row("MR%",
-          columns.map(c => numberToString(c._2.magicResistance)))
+        val magicResistanceRow = row(
+          key = "MR%",
+          label = "MR%",
+          columns = columns.map(c => numberToString(c._2.magicResistance)))
         // Concat
         attributeRows :+ magicResistanceRow
       }
       // Extract the list of non-ability effects
-      val effects = props.deltaColumns.map(_._2.effects) flatMap { effect =>
-        effect.map(e => <.li(e))
+      val effects = props.deltaColumns.map(_._2.effects).zipWithIndex flatMap { case (effect, i) =>
+        effect.zipWithIndex.map { case (e, j) =>
+          <.li(^.key := s"($i,$j)", e)
+        }
       }
       // Render component
       <.div(

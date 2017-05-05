@@ -25,6 +25,7 @@ object ChoicesArea {
       // Render the BG1 tome choice
       val bg1TomeChoice =
         <.div(
+          ^.key := "choice-bg1-tome",
           <.label(
             <.input(
               ^.`type` := "checkbox",
@@ -34,6 +35,7 @@ object ChoicesArea {
       // Render the MoLtM choice
       val moltmChoice =
         <.div(
+          ^.key := "choice-moltm",
           <.label(
             <.input(
               ^.`type` := "checkbox",
@@ -44,6 +46,7 @@ object ChoicesArea {
       val wrathChoice =
         TrialChoice.Component(
           TrialChoice.Props(
+            key = "wrath",
             name = "wrath",
             label = "Wrath",
             orientation = props.choices.trials.wrath,
@@ -51,6 +54,7 @@ object ChoicesArea {
       val fearChoice =
         TrialChoice.Component(
           TrialChoice.Props(
+            key = "fear",
             name = "fear",
             label = "Fear",
             orientation = props.choices.trials.fear,
@@ -58,6 +62,7 @@ object ChoicesArea {
       val greedChoice =
         TrialChoice.Component(
           TrialChoice.Props(
+            key = "greed",
             name = "greed",
             label = "Greed",
             orientation = props.choices.trials.greed,
@@ -65,6 +70,7 @@ object ChoicesArea {
       val prideChoice =
         TrialChoice.Component(
           TrialChoice.Props(
+            key = "pride",
             name = "pride",
             label = "Pride",
             orientation = props.choices.trials.pride,
@@ -72,6 +78,7 @@ object ChoicesArea {
       val selfishChoice =
         TrialChoice.Component(
           TrialChoice.Props(
+            key = "selfish",
             name = "selfish",
             label = "Selfish",
             orientation = props.choices.trials.selfish,

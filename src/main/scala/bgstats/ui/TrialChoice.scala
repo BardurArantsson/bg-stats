@@ -10,7 +10,7 @@ import japgolly.scalajs.react.vdom.html_<^._
 
 object TrialChoice {
 
-  case class Props(name: String, label: String, orientation: Orientation, onChange: Orientation => Callback)
+  case class Props(key: String, name: String, label: String, orientation: Orientation, onChange: Orientation => Callback)
 
   val Component: Component[Props, CtorType.Props] = ScalaFn[Props](
     props => {
@@ -18,6 +18,7 @@ object TrialChoice {
       val goodId = s"$idPrefix-good"
       val evilId = s"$idPrefix-evil"
       <.fieldset(
+        ^.key := props.key,
         ^.className :="medium-6 columns",
         <.legend(
           <.b(props.label)

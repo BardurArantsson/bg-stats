@@ -13,6 +13,7 @@ import scala.util.Try
 object AbilityInput {
 
   case class Props(
+    key: String,
     ability: Ability,
     value: Int,
     onChange: Int => Unit)
@@ -27,17 +28,20 @@ object AbilityInput {
         }
       }
       // Render
-      AbilityRow.Component(
-        AbilityRow.Props(
-          label = props.ability.displayName
-        )
-      )(
-        <.div(
-          <.input(
-            ^.`type` := "number",
-            ^.step := "1",
-            ^.value := props.value.toString,
-            ^.onChange ==> changed
+      <.div(
+        ^.key := props.key,
+        AbilityRow.Component(
+          AbilityRow.Props(
+            label = props.ability.displayName
+          )
+        )(
+          <.div(
+            <.input(
+              ^.`type` := "number",
+              ^.step := "1",
+              ^.value := props.value.toString,
+              ^.onChange ==> changed
+            )
           )
         )
       )

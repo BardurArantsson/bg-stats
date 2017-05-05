@@ -15,27 +15,37 @@ object AbilitiesArea {
       import props._
       // Generate the inputs for each of the abilities
       val renderedInputs = abilities.sortedValues.map { case (k, value) =>
-        AbilityInput.Component(
-          AbilityInput.Props(
-            ability = k,
-            value = value,
-            onChange = vNew =>
-              abilitiesCommands.updateAbilities(Abilities(
-                values = abilities.values.updated(k, vNew)))
-          ))
+        <.div(
+          ^.key := k.displayName,
+          AbilityInput.Component(
+            AbilityInput.Props(
+              key = k.displayName,
+              ability = k,
+              value = value,
+              onChange = vNew =>
+                abilitiesCommands.updateAbilities(Abilities(
+                  values = abilities.values.updated(k, vNew)))
+            ))
+        )
       }
       // Render component
       <.fieldset(
         ^.className := "fieldset",
-        <.legend("Abilities"),
+        <.legend(
+          ^.key := "legend",
+          "Abilities"
+        ),
         renderedInputs.toVdomArray,
-        AbilityRow.Component(
-          AbilityRow.Props(
-            label = "Total"
-          )
-        )(
-          <.div(
-            <.b(abilities.total)
+        <.div(
+          ^.key := "total",
+          AbilityRow.Component(
+            AbilityRow.Props(
+              label = "Total"
+            )
+          )(
+            <.div(
+              <.b(abilities.total)
+            )
           )
         )
       )

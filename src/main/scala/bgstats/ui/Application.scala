@@ -19,10 +19,13 @@ object Application {
         <.div(
           ^.className := "row",
           <.div(
+            ^.key := "abilities-choices-and-breakpoints",
             ^.className := "medium-7 columns",
             <.div(
+              ^.key := "abilities-and-choices",
               ^.className := "row",
               <.div(
+                ^.key := "abilities-area",
                 ^.className := "medium-4 columns",
                 AbilitiesArea.Component(
                   AbilitiesArea.Props(
@@ -30,6 +33,7 @@ object Application {
                 )
               ),
               <.div(
+                ^.key := "choices-area",
                 ^.className := "medium-8 columns",
                 ChoicesArea.Component(
                   ChoicesArea.Props(
@@ -38,6 +42,7 @@ object Application {
               )
             ),
             <.div(
+              ^.key := "breakpoints-area",
               ^.className := "row",
               <.div(
                 ^.className := "medium-12 columns",
@@ -49,8 +54,10 @@ object Application {
             )
           ),
           <.div(
+            ^.key := "totals-and-summary",
             ^.className := "medium-5 columns",
             <.div(
+              ^.key := "totals-area",
               ^.className := "row",
               <.div(
                 ^.className := "medium-12 columns",
@@ -63,6 +70,7 @@ object Application {
               )
             ),
             <.div(
+              ^.key := "summary-area",
               ^.className := "row",
               <.div(
                 ^.className := "medium-12 columns",

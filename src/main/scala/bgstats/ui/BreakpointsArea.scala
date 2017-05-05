@@ -13,9 +13,10 @@ object BreakpointsArea {
   val Component: Component[Props, CtorType.Props] = ScalaFn[Props](
     props => {
       // Render the list of breakpoints.
-      val renderedBreakpoints = props.renderedBreakpoints.map { renderedBreakpoint =>
+      val renderedBreakpoints = props.renderedBreakpoints.zipWithIndex.map { case (renderedBreakpoint, i) =>
         val breakpoint = renderedBreakpoint.breakpoint
         <.li(
+          ^.key := i,
           ^.classSet(
             "text-muted" -> !renderedBreakpoint.achieved),
           <.b(
