@@ -5,7 +5,6 @@ import bgstats.model.AbilityColumn.HellColumn
 import bgstats.model.AbilityColumn.MachineColumn
 import bgstats.model.AbilityColumn.TomesColumn
 import bgstats.model.ApplicationStore.State
-import monix.execution.Scheduler
 import monix.reactive.Observable
 import scalaz.Monoid
 import scalaz.syntax.monoid._
@@ -13,8 +12,7 @@ import scalaz.syntax.monoid._
 class ApplicationStoreImpl[M](
   breakpoints: Seq[Breakpoint[M]],
   abilitiesStore: AbilitiesStore,
-  choicesStore: ChoicesStore)(
-  implicit scheduler: Scheduler) extends ApplicationStore[M] {
+  choicesStore: ChoicesStore) extends ApplicationStore[M] {
 
   private[this] val deltaColumns$: Observable[Vector[(AbilityColumn, Effects)]] =
     choicesStore.inputChoices$.map { choices =>

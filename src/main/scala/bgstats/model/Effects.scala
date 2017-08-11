@@ -1,6 +1,5 @@
 package bgstats.model
 
-import bgstats.model.Abilities.AbilitiesMonoid
 import scalaz.syntax.monoid._
 import scalaz.Monoid
 import scalaz.std.vector._

@@ -2,7 +2,7 @@ enablePlugins(ScalaJSPlugin)
 
 name := "bg-stats"
 
-scalaVersion := "2.11.11"
+scalaVersion := "2.12.3"
 
 scalacOptions := Seq(
   "-Xlint",
