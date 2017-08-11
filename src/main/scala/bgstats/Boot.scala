@@ -12,9 +12,8 @@ import bgstats.ui.Application
 import japgolly.scalajs.react.vdom.html_<^._
 import monix.execution.Scheduler.Implicits.global
 import org.scalajs.dom.document
-import scala.scalajs.js.JSApp
 
-object Boot extends JSApp {
+object Boot {
 
   /**
    * Breakpoints for certain desirable items/effects.
@@ -39,7 +38,7 @@ object Boot extends JSApp {
   /**
    * Entry point to be called from JS.
    */
-  override def main(): Unit = {
+  def main(args: Array[String]): Unit = {
     // Set up all the stores
     val choicesStore: ChoicesStore = new ChoicesStoreImpl()
     val abilitiesStore: AbilitiesStore = new AbilitiesStoreImpl()

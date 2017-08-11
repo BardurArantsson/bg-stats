@@ -17,6 +17,8 @@ libraryDependencies ++= Seq(
   "org.scalaz" %%% "scalaz-core" % Version.scalaz,
   "com.github.japgolly.scalajs-react" %%% "core" % Version.scalaJsReact)
 
+scalaJSUseMainModuleInitializer := true
+
 jsDependencies ++= Seq(
   "org.webjars.bower" % "react" % Version.react
      /        "react-with-addons.js"
