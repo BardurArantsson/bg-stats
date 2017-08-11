@@ -1,8 +1,13 @@
 package bgstats.model
 
 import bgstats.model.Ability._
+import bgstats.model.AbilityColumn.DreamColumn
+import bgstats.model.AbilityColumn.HellColumn
+import bgstats.model.AbilityColumn.MachineColumn
+import bgstats.model.AbilityColumn.TomesColumn
 import bgstats.model.Effects.EffectsMonoid
 import bgstats.model.Orientation._
+
 import scalaz.syntax.monoid._
 import scalaz.Monoid
 
@@ -114,5 +119,15 @@ case class Choices(
       Monoid[Effects].zero
     }
   }
+
+  lazy val deltaColumns: Vector[(AbilityColumn, Effects)] =
+    Vector(
+      DreamColumn -> dreamEffects,
+      HellColumn -> trialsEffects,
+      MachineColumn -> machineEffects,
+      TomesColumn -> bg1TomeEffects)
+
+  lazy val deltaTotal: Effects =
+    deltaColumns.map(_._2).foldLeft(Monoid[Effects].zero)((a,b) => a |+| b)
 
 }
