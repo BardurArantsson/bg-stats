@@ -2,6 +2,7 @@ package bgstats.model
 
 import bgstats.monix_ext.Var
 import monix.execution.Scheduler
+import monix.reactive.Observable
 
 class ChoicesStoreImpl(implicit scheduler: Scheduler) extends ChoicesStore with ChoicesCommands {
 
@@ -12,7 +13,8 @@ class ChoicesStoreImpl(implicit scheduler: Scheduler) extends ChoicesStore with 
       dreamSacrifice = None,
       trials = Trials.default))
 
-  override val inputChoices$ = inputChoicesV.value$
+  override val inputChoices$: Observable[Choices] =
+    inputChoicesV.value$
 
   override def updateChoices(choices: Choices): Unit =
     inputChoicesV.set(choices)
