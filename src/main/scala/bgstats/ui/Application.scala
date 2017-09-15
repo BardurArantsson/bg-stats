@@ -1,7 +1,7 @@
 package bgstats.ui
 
 import bgstats.model.AllCommands
-import bgstats.model.ApplicationStore
+import bgstats.model.ApplicationState
 import japgolly.scalajs.react.CtorType
 import japgolly.scalajs.react.component.ScalaFn
 import japgolly.scalajs.react.component.ScalaFn.Component
@@ -9,7 +9,7 @@ import japgolly.scalajs.react.vdom.html_<^._
 
 object Application {
 
-  case class Props(state: ApplicationStore.State[VdomTag])(val allCommands: AllCommands)
+  case class Props(state: ApplicationState[VdomTag])(val allCommands: AllCommands)
 
   val Component: Component[Props, CtorType.Props] = ScalaFn[Props](
     props => {

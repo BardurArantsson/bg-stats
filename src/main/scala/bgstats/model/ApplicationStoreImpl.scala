@@ -1,6 +1,5 @@
 package bgstats.model
 
-import bgstats.model.ApplicationStore.State
 import monix.reactive.Observable
 
 class ApplicationStoreImpl[M](
@@ -8,11 +7,11 @@ class ApplicationStoreImpl[M](
   abilitiesStore: AbilitiesStore,
   choicesStore: ChoicesStore) extends ApplicationStore[M] {
 
-  override val state$: Observable[State[M]] =
+  override val state$: Observable[ApplicationState[M]] =
     abilitiesStore.baseAbilities$.combineLatest(
       choicesStore.inputChoices$).map({
         case (baseAbilities, choices) =>
-          State(baseAbilities, choices)(breakpoints)
+          ApplicationState(baseAbilities, choices)(breakpoints)
         })
 
   override def updateChoices(choices: Choices): Unit =
