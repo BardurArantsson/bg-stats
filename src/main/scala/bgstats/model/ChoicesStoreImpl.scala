@@ -7,11 +7,7 @@ import monix.reactive.Observable
 class ChoicesStoreImpl(implicit scheduler: Scheduler) extends ChoicesStore with ChoicesCommands {
 
   private[this] val inputChoicesV: Var[Choices] = Var(
-    Choices(
-      bg1Tomes = true,
-      machine = true,
-      dreamSacrifice = None,
-      trials = Trials.default))
+    Choices.default)
 
   override val inputChoices$: Observable[Choices] =
     inputChoicesV.value$

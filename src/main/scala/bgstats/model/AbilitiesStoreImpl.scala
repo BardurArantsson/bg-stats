@@ -1,6 +1,5 @@
 package bgstats.model
 
-import bgstats.model.Ability._
 import bgstats.monix_ext.Var
 import monix.execution.Scheduler
 import monix.reactive.Observable
@@ -11,13 +10,7 @@ class AbilitiesStoreImpl(implicit scheduler: Scheduler) extends AbilitiesStore w
     Math.min(25, Math.max(1, v))
 
   private[this] val baseAbilitiesV = Var[Abilities](
-    Abilities.fromValues(
-        STR -> 15,
-        DEX -> 15,
-        CON -> 15,
-        INT -> 15,
-        WIS -> 15,
-        CHA -> 15))
+    Abilities.default)
 
   override val baseAbilities$: Observable[Abilities] =
     baseAbilitiesV.value$

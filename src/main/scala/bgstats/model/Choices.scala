@@ -131,3 +131,14 @@ case class Choices(
     deltaColumns.map(_._2).foldLeft(Monoid[Effects].zero)((a,b) => a |+| b)
 
 }
+
+object Choices {
+
+  val default: Choices =
+    Choices(
+      bg1Tomes = true,
+      machine = true,
+      dreamSacrifice = None,
+      trials = Trials.default)
+
+}
