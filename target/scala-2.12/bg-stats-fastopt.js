@@ -2558,7 +2558,7 @@ $c_Lbgstats_ui_Application$.prototype.init___ = (function() {
       $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$();
       var c = $m_Lbgstats_ui_AbilitiesArea$().Component$1;
       var this$11 = $as_Ljapgolly_scalajs_react_CtorType$Props(c.ctor__Ljapgolly_scalajs_react_CtorType());
-      var props$1 = new $c_Lbgstats_ui_AbilitiesArea$Props().init___Lbgstats_model_Abilities__Lbgstats_model_AbilitiesCommands(state.baseSummaryAbilities$1.abilities$1, commands);
+      var props$1 = new $c_Lbgstats_ui_AbilitiesArea$Props().init___Lbgstats_model_Abilities__Lbgstats_model_AbilitiesCommands(state.baseSummaryAbilities__Lbgstats_model_SummaryAbilities().abilities$1, commands);
       var u = $as_Ljapgolly_scalajs_react_component_Generic$UnmountedWithRoot(this$11.construct$2.apply__O__O__O(props$1, this$11.mods$2));
       var jsx$25 = jsx$28.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$27, jsx$26, u.vdomElement__Ljapgolly_scalajs_react_vdom_VdomElement()]));
       var jsx$24 = $m_Ljapgolly_scalajs_react_vdom_HtmlTagOf$();
@@ -2581,7 +2581,7 @@ $c_Lbgstats_ui_Application$.prototype.init___ = (function() {
       $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$();
       var c$2 = $m_Lbgstats_ui_BreakpointsArea$().Component$1;
       var this$23 = $as_Ljapgolly_scalajs_react_CtorType$Props(c$2.ctor__Ljapgolly_scalajs_react_CtorType());
-      var props$4 = new $c_Lbgstats_ui_BreakpointsArea$Props().init___sc_Seq(state.renderedBreakpoints$1);
+      var props$4 = new $c_Lbgstats_ui_BreakpointsArea$Props().init___sc_Seq(state.renderedBreakpoints__sc_Seq());
       var u$2 = $as_Ljapgolly_scalajs_react_component_Generic$UnmountedWithRoot(this$23.construct$2.apply__O__O__O(props$4, this$23.mods$2));
       var jsx$15 = jsx$34.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$33, jsx$32, jsx$21, jsx$20.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$19, jsx$18, jsx$17.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$16, u$2.vdomElement__Ljapgolly_scalajs_react_vdom_VdomElement()]))]))]));
       var jsx$14 = $m_Ljapgolly_scalajs_react_vdom_HtmlTagOf$();
@@ -2598,7 +2598,7 @@ $c_Lbgstats_ui_Application$.prototype.init___ = (function() {
       $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$();
       var c$3 = $m_Lbgstats_ui_TotalsArea$().Component$1;
       var this$32 = $as_Ljapgolly_scalajs_react_CtorType$Props(c$3.ctor__Ljapgolly_scalajs_react_CtorType());
-      var props$5 = new $c_Lbgstats_ui_TotalsArea$Props().init___Lbgstats_model_SummaryAbilities__sci_Vector__Lbgstats_model_SummaryAbilities(state.baseSummaryAbilities$1, state.deltaColumns$1, state.totalsColumn$1);
+      var props$5 = new $c_Lbgstats_ui_TotalsArea$Props().init___Lbgstats_model_SummaryAbilities__sci_Vector__Lbgstats_model_SummaryAbilities(state.baseSummaryAbilities__Lbgstats_model_SummaryAbilities(), state.deltaColumns__sci_Vector(), state.totalsColumn__Lbgstats_model_SummaryAbilities());
       var u$3 = $as_Ljapgolly_scalajs_react_component_Generic$UnmountedWithRoot(this$32.construct$2.apply__O__O__O(props$5, this$32.mods$2));
       var jsx$6 = jsx$11.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$10, jsx$9, jsx$8.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$7, u$3.vdomElement__Ljapgolly_scalajs_react_vdom_VdomElement()]))]));
       var jsx$5 = $m_Ljapgolly_scalajs_react_vdom_HtmlTagOf$();
@@ -2612,7 +2612,7 @@ $c_Lbgstats_ui_Application$.prototype.init___ = (function() {
       var c$4 = $m_Lbgstats_ui_SummaryArea$().Component$1;
       var this$39 = $as_Ljapgolly_scalajs_react_CtorType$Props(c$4.ctor__Ljapgolly_scalajs_react_CtorType());
       var x$1 = state.inputChoices$1;
-      var x$2 = state.baseSummaryAbilities$1.abilities$1;
+      var x$2 = state.baseSummaryAbilities__Lbgstats_model_SummaryAbilities().abilities$1;
       var props$6 = new $c_Lbgstats_ui_SummaryArea$Props().init___Lbgstats_model_Abilities__Lbgstats_model_Choices(x$2, x$1);
       var u$4 = $as_Ljapgolly_scalajs_react_component_Generic$UnmountedWithRoot(this$39.construct$2.apply__O__O__O(props$6, this$39.mods$2));
       var a = jsx$37.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$36.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$35, jsx$15, jsx$14.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$13, jsx$12, jsx$6, jsx$5.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$4, jsx$3, jsx$2.apply$extension__T__sc_Seq__Ljapgolly_scalajs_react_vdom_TagOf("div", new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, u$4.vdomElement__Ljapgolly_scalajs_react_vdom_VdomElement()]))]))]))]))]));
@@ -2674,7 +2674,7 @@ $c_Lbgstats_ui_BreakpointsArea$.prototype.init___ = (function() {
             })($this$1));
             var jsx$7 = jsx$8.$$colon$eq__O__F2__Ljapgolly_scalajs_react_vdom_TagMod(i, $f_Ljapgolly_scalajs_react_vdom_ImplicitsForVdomAttr1__vdomAttrVtKey__F1__F2(this$10, k));
             $m_Ljapgolly_scalajs_react_vdom_html$und$less$up$();
-            var y = (!renderedBreakpoint.achieved$1);
+            var y = (!renderedBreakpoint.achieved__Z());
             var array = [new $c_T2().init___O__O("text-muted", y)];
             var z = $m_Ljapgolly_scalajs_react_vdom_PackageBase$().EmptyVdom$1;
             var start = 0;
@@ -18981,11 +18981,13 @@ $c_Lbgstats_model_Abilities.prototype.$classData = $d_Lbgstats_model_Abilities;
 function $c_Lbgstats_model_ApplicationStore$State() {
   $c_O.call(this);
   this.baseSummaryAbilities$1 = null;
-  this.inputChoices$1 = null;
+  this.totalsColumn$1 = null;
   this.renderedBreakpoints$1 = null;
   this.deltaColumns$1 = null;
-  this.deltaTotal$1 = null;
-  this.totalsColumn$1 = null
+  this.baseAbilities$1 = null;
+  this.inputChoices$1 = null;
+  this.breakpoints$1 = null;
+  this.bitmap$0$1 = 0
 }
 $c_Lbgstats_model_ApplicationStore$State.prototype = new $h_O();
 $c_Lbgstats_model_ApplicationStore$State.prototype.constructor = $c_Lbgstats_model_ApplicationStore$State;
@@ -18998,47 +19000,35 @@ $c_Lbgstats_model_ApplicationStore$State.prototype.productPrefix__T = (function(
   return "State"
 });
 $c_Lbgstats_model_ApplicationStore$State.prototype.productArity__I = (function() {
-  return 6
+  return 2
+});
+$c_Lbgstats_model_ApplicationStore$State.prototype.renderedBreakpoints$lzycompute__p1__sc_Seq = (function() {
+  if (((4 & this.bitmap$0$1) === 0)) {
+    var jsx$2 = this.breakpoints$1;
+    var jsx$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this) {
+      return (function(x$1$2) {
+        var x$1 = $as_Lbgstats_model_Breakpoint(x$1$2);
+        return new $c_Lbgstats_model_RenderedBreakpoint().init___Lbgstats_model_Breakpoint__Lbgstats_model_Abilities(x$1, $this.totalsColumn__Lbgstats_model_SummaryAbilities().abilities$1)
+      })
+    })(this));
+    var this$1 = $m_sc_Seq$();
+    this.renderedBreakpoints$1 = $as_sc_Seq(jsx$2.map__F1__scg_CanBuildFrom__O(jsx$1, this$1.ReusableCBFInstance$2));
+    this.bitmap$0$1 = (4 | this.bitmap$0$1)
+  };
+  this.breakpoints$1 = null;
+  return this.renderedBreakpoints$1
 });
 $c_Lbgstats_model_ApplicationStore$State.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
   } else if ($is_Lbgstats_model_ApplicationStore$State(x$1)) {
     var State$1 = $as_Lbgstats_model_ApplicationStore$State(x$1);
-    var x = this.baseSummaryAbilities$1;
-    var x$2 = State$1.baseSummaryAbilities$1;
+    var x = this.baseAbilities$1;
+    var x$2 = State$1.baseAbilities$1;
     if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
       var x$3 = this.inputChoices$1;
       var x$4 = State$1.inputChoices$1;
-      var jsx$4 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
-    } else {
-      var jsx$4 = false
-    };
-    if (jsx$4) {
-      var x$5 = this.renderedBreakpoints$1;
-      var x$6 = State$1.renderedBreakpoints$1;
-      var jsx$3 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
-    } else {
-      var jsx$3 = false
-    };
-    if (jsx$3) {
-      var x$7 = this.deltaColumns$1;
-      var x$8 = State$1.deltaColumns$1;
-      var jsx$2 = ((x$7 === null) ? (x$8 === null) : $f_sc_GenSeqLike__equals__O__Z(x$7, x$8))
-    } else {
-      var jsx$2 = false
-    };
-    if (jsx$2) {
-      var x$9 = this.deltaTotal$1;
-      var x$10 = State$1.deltaTotal$1;
-      var jsx$1 = ((x$9 === null) ? (x$10 === null) : x$9.equals__O__Z(x$10))
-    } else {
-      var jsx$1 = false
-    };
-    if (jsx$1) {
-      var x$11 = this.totalsColumn$1;
-      var x$12 = State$1.totalsColumn$1;
-      return ((x$11 === null) ? (x$12 === null) : x$11.equals__O__Z(x$12))
+      return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
     } else {
       return false
     }
@@ -19049,27 +19039,11 @@ $c_Lbgstats_model_ApplicationStore$State.prototype.equals__O__Z = (function(x$1)
 $c_Lbgstats_model_ApplicationStore$State.prototype.productElement__I__O = (function(x$1) {
   switch (x$1) {
     case 0: {
-      return this.baseSummaryAbilities$1;
+      return this.baseAbilities$1;
       break
     }
     case 1: {
       return this.inputChoices$1;
-      break
-    }
-    case 2: {
-      return this.renderedBreakpoints$1;
-      break
-    }
-    case 3: {
-      return this.deltaColumns$1;
-      break
-    }
-    case 4: {
-      return this.deltaTotal$1;
-      break
-    }
-    case 5: {
-      return this.totalsColumn$1;
       break
     }
     default: {
@@ -19077,17 +19051,56 @@ $c_Lbgstats_model_ApplicationStore$State.prototype.productElement__I__O = (funct
     }
   }
 });
-$c_Lbgstats_model_ApplicationStore$State.prototype.init___Lbgstats_model_SummaryAbilities__Lbgstats_model_Choices__sc_Seq__sci_Vector__Lbgstats_model_Effects__Lbgstats_model_SummaryAbilities = (function(baseSummaryAbilities, inputChoices, renderedBreakpoints, deltaColumns, deltaTotal, totalsColumn) {
-  this.baseSummaryAbilities$1 = baseSummaryAbilities;
-  this.inputChoices$1 = inputChoices;
-  this.renderedBreakpoints$1 = renderedBreakpoints;
-  this.deltaColumns$1 = deltaColumns;
-  this.deltaTotal$1 = deltaTotal;
-  this.totalsColumn$1 = totalsColumn;
-  return this
-});
 $c_Lbgstats_model_ApplicationStore$State.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Lbgstats_model_ApplicationStore$State.prototype.baseSummaryAbilities__Lbgstats_model_SummaryAbilities = (function() {
+  return (((1 & this.bitmap$0$1) === 0) ? this.baseSummaryAbilities$lzycompute__p1__Lbgstats_model_SummaryAbilities() : this.baseSummaryAbilities$1)
+});
+$c_Lbgstats_model_ApplicationStore$State.prototype.deltaColumns__sci_Vector = (function() {
+  return (((8 & this.bitmap$0$1) === 0) ? this.deltaColumns$lzycompute__p1__sci_Vector() : this.deltaColumns$1)
+});
+$c_Lbgstats_model_ApplicationStore$State.prototype.deltaColumns$lzycompute__p1__sci_Vector = (function() {
+  if (((8 & this.bitmap$0$1) === 0)) {
+    this.deltaColumns$1 = this.inputChoices$1.deltaColumns__sci_Vector();
+    this.bitmap$0$1 = (8 | this.bitmap$0$1)
+  };
+  return this.deltaColumns$1
+});
+$c_Lbgstats_model_ApplicationStore$State.prototype.baseSummaryAbilities$lzycompute__p1__Lbgstats_model_SummaryAbilities = (function() {
+  if (((1 & this.bitmap$0$1) === 0)) {
+    this.baseSummaryAbilities$1 = new $c_Lbgstats_model_SummaryAbilities().init___Lbgstats_model_Abilities__I(this.baseAbilities$1, 0);
+    this.bitmap$0$1 = (1 | this.bitmap$0$1)
+  };
+  return this.baseSummaryAbilities$1
+});
+$c_Lbgstats_model_ApplicationStore$State.prototype.totalsColumn$lzycompute__p1__Lbgstats_model_SummaryAbilities = (function() {
+  if (((2 & this.bitmap$0$1) === 0)) {
+    $m_Lscalaz_syntax_package$().monoid__Lscalaz_syntax_Syntaxes$monoid$();
+    var v = this.baseSummaryAbilities__Lbgstats_model_SummaryAbilities();
+    var F0 = $m_Lbgstats_model_SummaryAbilities$AbilitiesMonoid$();
+    var this$2 = new $c_Lscalaz_syntax_SemigroupOps().init___O__Lscalaz_Semigroup(v, F0);
+    var other = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this) {
+      return (function() {
+        return $this.inputChoices$1.deltaTotal__Lbgstats_model_Effects().deltaSummaryAbilities$1
+      })
+    })(this));
+    this.totalsColumn$1 = $as_Lbgstats_model_SummaryAbilities(this$2.F$1.append__O__F0__O(this$2.self$1, other));
+    this.bitmap$0$1 = (2 | this.bitmap$0$1)
+  };
+  return this.totalsColumn$1
+});
+$c_Lbgstats_model_ApplicationStore$State.prototype.init___Lbgstats_model_Abilities__Lbgstats_model_Choices__sc_Seq = (function(baseAbilities, inputChoices, breakpoints) {
+  this.baseAbilities$1 = baseAbilities;
+  this.inputChoices$1 = inputChoices;
+  this.breakpoints$1 = breakpoints;
+  return this
+});
+$c_Lbgstats_model_ApplicationStore$State.prototype.renderedBreakpoints__sc_Seq = (function() {
+  return (((4 & this.bitmap$0$1) === 0) ? this.renderedBreakpoints$lzycompute__p1__sc_Seq() : this.renderedBreakpoints$1)
+});
+$c_Lbgstats_model_ApplicationStore$State.prototype.totalsColumn__Lbgstats_model_SummaryAbilities = (function() {
+  return (((2 & this.bitmap$0$1) === 0) ? this.totalsColumn$lzycompute__p1__Lbgstats_model_SummaryAbilities() : this.totalsColumn$1)
 });
 $c_Lbgstats_model_ApplicationStore$State.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
@@ -19125,11 +19138,6 @@ function $c_Lbgstats_model_ApplicationStoreImpl() {
   this.breakpoints$1 = null;
   this.abilitiesStore$1 = null;
   this.choicesStore$1 = null;
-  this.deltaColumns$$1 = null;
-  this.deltaTotal$$1 = null;
-  this.baseSummaryAbilities$$1 = null;
-  this.totals$$1 = null;
-  this.renderedBreakpoints$$1 = null;
   this.state$$1 = null
 }
 $c_Lbgstats_model_ApplicationStoreImpl.prototype = new $h_O();
@@ -19146,182 +19154,22 @@ $c_Lbgstats_model_ApplicationStoreImpl.prototype.init___sc_Seq__Lbgstats_model_A
   this.breakpoints$1 = breakpoints;
   this.abilitiesStore$1 = abilitiesStore;
   this.choicesStore$1 = choicesStore;
-  var this$10 = choicesStore.inputChoices$$1;
+  var this$1 = abilitiesStore.baseAbilities$$1;
+  var other = choicesStore.inputChoices$$1;
+  var this$2 = $f_Lmonix_reactive_observables_ObservableLike__combineLatest__Lmonix_reactive_Observable__Lmonix_reactive_observables_ObservableLike(this$1, other);
   var f = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this) {
-    return (function(choices$2) {
-      var choices = $as_Lbgstats_model_Choices(choices$2);
-      var this$9 = $m_s_package$().Vector$1;
-      var self = $m_Lbgstats_model_AbilityColumn$DreamColumn$();
-      var y = choices.dreamEffects__Lbgstats_model_Effects();
-      var jsx$3 = new $c_T2().init___O__O(self, y);
-      var self$1 = $m_Lbgstats_model_AbilityColumn$HellColumn$();
-      var y$1 = choices.trialsEffects__Lbgstats_model_Effects();
-      var jsx$2 = new $c_T2().init___O__O(self$1, y$1);
-      var self$2 = $m_Lbgstats_model_AbilityColumn$MachineColumn$();
-      var y$2 = choices.machineEffects__Lbgstats_model_Effects();
-      var jsx$1 = new $c_T2().init___O__O(self$2, y$2);
-      var self$3 = $m_Lbgstats_model_AbilityColumn$TomesColumn$();
-      var y$3 = choices.bg1TomeEffects__Lbgstats_model_Effects();
-      var array = [jsx$3, jsx$2, jsx$1, new $c_T2().init___O__O(self$3, y$3)];
-      if (($uI(array.length) === 0)) {
-        return this$9.NIL$6
-      } else {
-        var b = new $c_sci_VectorBuilder().init___();
-        var i = 0;
-        var len = $uI(array.length);
-        while ((i < len)) {
-          var index = i;
-          var arg1 = array[index];
-          b.$$plus$eq__O__sci_VectorBuilder(arg1);
-          i = ((1 + i) | 0)
-        };
-        return b.result__sci_Vector()
-      }
-    })
-  })(this));
-  this.deltaColumns$$1 = $as_Lmonix_reactive_Observable($f_Lmonix_reactive_observables_ObservableLike__map__F1__Lmonix_reactive_observables_ObservableLike(this$10, f));
-  var this$16 = this.deltaColumns$$1;
-  var f$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$2$1) {
-    return (function(cs$2) {
-      var cs = $as_sci_Vector(cs$2);
-      $m_sci_Vector$();
-      var bf = $m_sc_IndexedSeq$().ReusableCBF$6;
-      var b$1 = $f_sc_TraversableLike__builder$1__psc_TraversableLike__scg_CanBuildFrom__scm_Builder(cs, bf);
-      var this$12 = cs.iterator__sci_VectorIterator();
-      while (this$12.$$undhasNext$2) {
-        var arg1$1 = this$12.next__O();
-        var x$1 = $as_T2(arg1$1);
-        b$1.$$plus$eq__O__scm_Builder($as_Lbgstats_model_Effects(x$1.$$und2__O()))
-      };
-      var jsx$4 = $as_sc_TraversableOnce(b$1.result__O());
-      $m_Lscalaz_Monoid$();
-      var F = $m_Lbgstats_model_Effects$EffectsMonoid$();
-      return $as_Lbgstats_model_Effects(jsx$4.foldLeft__O__F2__O(F.zero__Lbgstats_model_Effects(), new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(this$2$2) {
-        return (function(a$2, b$2) {
-          var a = $as_Lbgstats_model_Effects(a$2);
-          var b$3 = $as_Lbgstats_model_Effects(b$2);
-          $m_Lscalaz_syntax_package$().monoid__Lscalaz_syntax_Syntaxes$monoid$();
-          var F0 = $m_Lbgstats_model_Effects$EffectsMonoid$();
-          var this$15 = new $c_Lscalaz_syntax_SemigroupOps().init___O__Lscalaz_Semigroup(a, F0);
-          var other = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this$1, b$4) {
-            return (function() {
-              return b$4
-            })
-          })(this$2$2, b$3));
-          return $as_Lbgstats_model_Effects(this$15.F$1.append__O__F0__O(this$15.self$1, other))
-        })
-      })(this$2$1))))
-    })
-  })(this));
-  this.deltaTotal$$1 = $as_Lmonix_reactive_Observable($f_Lmonix_reactive_observables_ObservableLike__map__F1__Lmonix_reactive_observables_ObservableLike(this$16, f$1));
-  var this$17 = abilitiesStore.baseAbilities$$1;
-  var f$2 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$3$1) {
-    return (function(a$2$1) {
-      var a$1 = $as_Lbgstats_model_Abilities(a$2$1);
-      return new $c_Lbgstats_model_SummaryAbilities().init___Lbgstats_model_Abilities__I(a$1, 0)
-    })
-  })(this));
-  this.baseSummaryAbilities$$1 = $as_Lmonix_reactive_Observable($f_Lmonix_reactive_observables_ObservableLike__map__F1__Lmonix_reactive_observables_ObservableLike(this$17, f$2));
-  var this$18 = this.baseSummaryAbilities$$1;
-  var other$1 = this.deltaTotal$$1;
-  var this$21 = $f_Lmonix_reactive_observables_ObservableLike__combineLatest__Lmonix_reactive_Observable__Lmonix_reactive_observables_ObservableLike(this$18, other$1);
-  var f$3 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$4$1) {
     return (function(x0$1$2) {
       var x0$1 = $as_T2(x0$1$2);
       if ((x0$1 !== null)) {
-        var base = $as_Lbgstats_model_SummaryAbilities(x0$1.$$und1__O());
-        var delta = $as_Lbgstats_model_Effects(x0$1.$$und2__O());
-        $m_Lscalaz_syntax_package$().monoid__Lscalaz_syntax_Syntaxes$monoid$();
-        var F0$1 = $m_Lbgstats_model_SummaryAbilities$AbilitiesMonoid$();
-        var this$20 = new $c_Lscalaz_syntax_SemigroupOps().init___O__Lscalaz_Semigroup(base, F0$1);
-        var other$2 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this$2, delta$1) {
-          return (function() {
-            return delta$1.deltaSummaryAbilities$1
-          })
-        })(this$4$1, delta));
-        return $as_Lbgstats_model_SummaryAbilities(this$20.F$1.append__O__F0__O(this$20.self$1, other$2))
+        var baseAbilities = $as_Lbgstats_model_Abilities(x0$1.$$und1__O());
+        var choices = $as_Lbgstats_model_Choices(x0$1.$$und2__O());
+        return new $c_Lbgstats_model_ApplicationStore$State().init___Lbgstats_model_Abilities__Lbgstats_model_Choices__sc_Seq(baseAbilities, choices, $this.breakpoints$1)
       } else {
         throw new $c_s_MatchError().init___O(x0$1)
       }
     })
   })(this));
-  this.totals$$1 = $as_Lmonix_reactive_Observable($f_Lmonix_reactive_observables_ObservableLike__map__F1__Lmonix_reactive_observables_ObservableLike(this$21, f$3));
-  var this$22 = this.totals$$1;
-  var f$4 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$5$1) {
-    return (function(x$2$2) {
-      var x$2 = $as_Lbgstats_model_SummaryAbilities(x$2$2);
-      return x$2.abilities$1
-    })
-  })(this));
-  var this$25 = $f_Lmonix_reactive_observables_ObservableLike__map__F1__Lmonix_reactive_observables_ObservableLike(this$22, f$4);
-  var f$5 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$6$1) {
-    return (function(a$3$2) {
-      var a$3 = $as_Lbgstats_model_Abilities(a$3$2);
-      var jsx$7 = this$6$1.breakpoints$1;
-      var jsx$5 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$3, a$4) {
-        return (function(breakpoint$2) {
-          var breakpoint = $as_Lbgstats_model_Breakpoint(breakpoint$2);
-          var this$23 = a$4.values$1;
-          var key = breakpoint.ability$1;
-          var x1 = this$23.get__O__s_Option(key);
-          if ($is_s_Some(x1)) {
-            var x2 = $as_s_Some(x1);
-            var v = x2.value$2;
-            var jsx$6 = v
-          } else {
-            var x = $m_s_None$();
-            if ((!(x === x1))) {
-              throw new $c_s_MatchError().init___O(x1)
-            };
-            var jsx$6 = 0
-          };
-          return new $c_Lbgstats_model_RenderedBreakpoint().init___Lbgstats_model_Breakpoint__Z(breakpoint, ($uI(jsx$6) >= breakpoint.minimum$1))
-        })
-      })(this$6$1, a$3));
-      var this$24 = $m_sc_Seq$();
-      return $as_sc_Seq(jsx$7.map__F1__scg_CanBuildFrom__O(jsx$5, this$24.ReusableCBFInstance$2))
-    })
-  })(this));
-  this.renderedBreakpoints$$1 = $as_Lmonix_reactive_Observable($f_Lmonix_reactive_observables_ObservableLike__map__F1__Lmonix_reactive_observables_ObservableLike(this$25, f$5));
-  var this$30 = this.baseSummaryAbilities$$1;
-  var this$29 = choicesStore.inputChoices$$1;
-  var this$28 = this.renderedBreakpoints$$1;
-  var this$27 = this.deltaColumns$$1;
-  var this$26 = this.deltaTotal$$1;
-  var other$3 = this.totals$$1;
-  var other$4 = $as_Lmonix_reactive_Observable($f_Lmonix_reactive_observables_ObservableLike__combineLatest__Lmonix_reactive_Observable__Lmonix_reactive_observables_ObservableLike(this$26, other$3));
-  var other$5 = $as_Lmonix_reactive_Observable($f_Lmonix_reactive_observables_ObservableLike__combineLatest__Lmonix_reactive_Observable__Lmonix_reactive_observables_ObservableLike(this$27, other$4));
-  var other$6 = $as_Lmonix_reactive_Observable($f_Lmonix_reactive_observables_ObservableLike__combineLatest__Lmonix_reactive_Observable__Lmonix_reactive_observables_ObservableLike(this$28, other$5));
-  var other$7 = $as_Lmonix_reactive_Observable($f_Lmonix_reactive_observables_ObservableLike__combineLatest__Lmonix_reactive_Observable__Lmonix_reactive_observables_ObservableLike(this$29, other$6));
-  var this$31 = $f_Lmonix_reactive_observables_ObservableLike__combineLatest__Lmonix_reactive_Observable__Lmonix_reactive_observables_ObservableLike(this$30, other$7);
-  var f$7 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$7$1) {
-    return (function(x0$2$2) {
-      var x0$2 = $as_T2(x0$2$2);
-      if ((x0$2 !== null)) {
-        var a$5 = $as_Lbgstats_model_SummaryAbilities(x0$2.$$und1__O());
-        var p2 = $as_T2(x0$2.$$und2__O());
-        if ((p2 !== null)) {
-          var b$5 = $as_Lbgstats_model_Choices(p2.$$und1__O());
-          var p3 = $as_T2(p2.$$und2__O());
-          if ((p3 !== null)) {
-            var c = $as_sc_Seq(p3.$$und1__O());
-            var p4 = $as_T2(p3.$$und2__O());
-            if ((p4 !== null)) {
-              var d = $as_sci_Vector(p4.$$und1__O());
-              var p5 = $as_T2(p4.$$und2__O());
-              if ((p5 !== null)) {
-                var e = $as_Lbgstats_model_Effects(p5.$$und1__O());
-                var f$6 = $as_Lbgstats_model_SummaryAbilities(p5.$$und2__O());
-                return new $c_Lbgstats_model_ApplicationStore$State().init___Lbgstats_model_SummaryAbilities__Lbgstats_model_Choices__sc_Seq__sci_Vector__Lbgstats_model_Effects__Lbgstats_model_SummaryAbilities(a$5, b$5, c, d, e, f$6)
-              }
-            }
-          }
-        }
-      };
-      throw new $c_s_MatchError().init___O(x0$2)
-    })
-  })(this));
-  this.state$$1 = $as_Lmonix_reactive_Observable($f_Lmonix_reactive_observables_ObservableLike__map__F1__Lmonix_reactive_observables_ObservableLike(this$31, f$7));
+  this.state$$1 = $as_Lmonix_reactive_Observable($f_Lmonix_reactive_observables_ObservableLike__map__F1__Lmonix_reactive_observables_ObservableLike(this$2, f));
   return this
 });
 $c_Lbgstats_model_ApplicationStoreImpl.prototype.updateChoices__Lbgstats_model_Choices__V = (function(choices) {
@@ -19442,6 +19290,8 @@ function $c_Lbgstats_model_Choices() {
   this.trialsEffects$1 = null;
   this.machineEffects$1 = null;
   this.bg1TomeEffects$1 = null;
+  this.deltaColumns$1 = null;
+  this.deltaTotal$1 = null;
   this.bg1Tomes$1 = false;
   this.machine$1 = false;
   this.dreamSacrifice$1 = null;
@@ -19634,6 +19484,80 @@ $c_Lbgstats_model_Choices.prototype.machineEffects$lzycompute__p1__Lbgstats_mode
 });
 $c_Lbgstats_model_Choices.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Lbgstats_model_Choices.prototype.deltaColumns__sci_Vector = (function() {
+  return (((16 & this.bitmap$0$1) === 0) ? this.deltaColumns$lzycompute__p1__sci_Vector() : this.deltaColumns$1)
+});
+$c_Lbgstats_model_Choices.prototype.deltaTotal$lzycompute__p1__Lbgstats_model_Effects = (function() {
+  if (((32 & this.bitmap$0$1) === 0)) {
+    var this$2 = this.deltaColumns__sci_Vector();
+    $m_sci_Vector$();
+    var bf = $m_sc_IndexedSeq$().ReusableCBF$6;
+    var b = $f_sc_TraversableLike__builder$1__psc_TraversableLike__scg_CanBuildFrom__scm_Builder(this$2, bf);
+    var this$3 = this$2.iterator__sci_VectorIterator();
+    while (this$3.$$undhasNext$2) {
+      var arg1 = this$3.next__O();
+      var x$1 = $as_T2(arg1);
+      b.$$plus$eq__O__scm_Builder($as_Lbgstats_model_Effects(x$1.$$und2__O()))
+    };
+    var jsx$1 = $as_sc_TraversableOnce(b.result__O());
+    $m_Lscalaz_Monoid$();
+    var F = $m_Lbgstats_model_Effects$EffectsMonoid$();
+    this.deltaTotal$1 = $as_Lbgstats_model_Effects(jsx$1.foldLeft__O__F2__O(F.zero__Lbgstats_model_Effects(), new $c_sjsr_AnonFunction2().init___sjs_js_Function2((function(this$2$1) {
+      return (function(a$2, b$2) {
+        var a = $as_Lbgstats_model_Effects(a$2);
+        var b$1 = $as_Lbgstats_model_Effects(b$2);
+        $m_Lscalaz_syntax_package$().monoid__Lscalaz_syntax_Syntaxes$monoid$();
+        var F0 = $m_Lbgstats_model_Effects$EffectsMonoid$();
+        var this$6 = new $c_Lscalaz_syntax_SemigroupOps().init___O__Lscalaz_Semigroup(a, F0);
+        var other = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function($this, b$3) {
+          return (function() {
+            return b$3
+          })
+        })(this$2$1, b$1));
+        return $as_Lbgstats_model_Effects(this$6.F$1.append__O__F0__O(this$6.self$1, other))
+      })
+    })(this))));
+    this.bitmap$0$1 = (32 | this.bitmap$0$1)
+  };
+  return this.deltaTotal$1
+});
+$c_Lbgstats_model_Choices.prototype.deltaTotal__Lbgstats_model_Effects = (function() {
+  return (((32 & this.bitmap$0$1) === 0) ? this.deltaTotal$lzycompute__p1__Lbgstats_model_Effects() : this.deltaTotal$1)
+});
+$c_Lbgstats_model_Choices.prototype.deltaColumns$lzycompute__p1__sci_Vector = (function() {
+  if (((16 & this.bitmap$0$1) === 0)) {
+    var this$9 = $m_s_package$().Vector$1;
+    var self = $m_Lbgstats_model_AbilityColumn$DreamColumn$();
+    var y = this.dreamEffects__Lbgstats_model_Effects();
+    var jsx$3 = new $c_T2().init___O__O(self, y);
+    var self$1 = $m_Lbgstats_model_AbilityColumn$HellColumn$();
+    var y$1 = this.trialsEffects__Lbgstats_model_Effects();
+    var jsx$2 = new $c_T2().init___O__O(self$1, y$1);
+    var self$2 = $m_Lbgstats_model_AbilityColumn$MachineColumn$();
+    var y$2 = this.machineEffects__Lbgstats_model_Effects();
+    var jsx$1 = new $c_T2().init___O__O(self$2, y$2);
+    var self$3 = $m_Lbgstats_model_AbilityColumn$TomesColumn$();
+    var y$3 = this.bg1TomeEffects__Lbgstats_model_Effects();
+    var array = [jsx$3, jsx$2, jsx$1, new $c_T2().init___O__O(self$3, y$3)];
+    if (($uI(array.length) === 0)) {
+      var jsx$4 = this$9.NIL$6
+    } else {
+      var b = new $c_sci_VectorBuilder().init___();
+      var i = 0;
+      var len = $uI(array.length);
+      while ((i < len)) {
+        var index = i;
+        var arg1 = array[index];
+        b.$$plus$eq__O__sci_VectorBuilder(arg1);
+        i = ((1 + i) | 0)
+      };
+      var jsx$4 = b.result__sci_Vector()
+    };
+    this.deltaColumns$1 = jsx$4;
+    this.bitmap$0$1 = (16 | this.bitmap$0$1)
+  };
+  return this.deltaColumns$1
 });
 $c_Lbgstats_model_Choices.prototype.trialsEffects$lzycompute__p1__Lbgstats_model_Effects = (function() {
   if (((2 & this.bitmap$0$1) === 0)) {
@@ -20043,8 +19967,10 @@ $c_Lbgstats_model_Effects.prototype.$classData = $d_Lbgstats_model_Effects;
 /** @constructor */
 function $c_Lbgstats_model_RenderedBreakpoint() {
   $c_O.call(this);
+  this.achieved$1 = false;
   this.breakpoint$1 = null;
-  this.achieved$1 = false
+  this.abilities$1 = null;
+  this.bitmap$0$1 = false
 }
 $c_Lbgstats_model_RenderedBreakpoint.prototype = new $h_O();
 $c_Lbgstats_model_RenderedBreakpoint.prototype.constructor = $c_Lbgstats_model_RenderedBreakpoint;
@@ -20059,6 +19985,30 @@ $c_Lbgstats_model_RenderedBreakpoint.prototype.productPrefix__T = (function() {
 $c_Lbgstats_model_RenderedBreakpoint.prototype.productArity__I = (function() {
   return 2
 });
+$c_Lbgstats_model_RenderedBreakpoint.prototype.achieved$lzycompute__p1__Z = (function() {
+  if ((!this.bitmap$0$1)) {
+    var this$1 = this.abilities$1.values$1;
+    var key = this.breakpoint$1.ability$1;
+    var x1 = this$1.get__O__s_Option(key);
+    if ($is_s_Some(x1)) {
+      var x2 = $as_s_Some(x1);
+      var v = x2.value$2;
+      var jsx$1 = v
+    } else {
+      var x = $m_s_None$();
+      if ((!(x === x1))) {
+        throw new $c_s_MatchError().init___O(x1)
+      };
+      var jsx$1 = 0
+    };
+    this.achieved$1 = ($uI(jsx$1) >= this.breakpoint$1.minimum$1);
+    this.bitmap$0$1 = true
+  };
+  return this.achieved$1
+});
+$c_Lbgstats_model_RenderedBreakpoint.prototype.achieved__Z = (function() {
+  return ((!this.bitmap$0$1) ? this.achieved$lzycompute__p1__Z() : this.achieved$1)
+});
 $c_Lbgstats_model_RenderedBreakpoint.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -20067,7 +20017,9 @@ $c_Lbgstats_model_RenderedBreakpoint.prototype.equals__O__Z = (function(x$1) {
     var x = this.breakpoint$1;
     var x$2 = RenderedBreakpoint$1.breakpoint$1;
     if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
-      return (this.achieved$1 === RenderedBreakpoint$1.achieved$1)
+      var x$3 = this.abilities$1;
+      var x$4 = RenderedBreakpoint$1.abilities$1;
+      return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
     } else {
       return false
     }
@@ -20082,7 +20034,7 @@ $c_Lbgstats_model_RenderedBreakpoint.prototype.productElement__I__O = (function(
       break
     }
     case 1: {
-      return this.achieved$1;
+      return this.abilities$1;
       break
     }
     default: {
@@ -20093,16 +20045,14 @@ $c_Lbgstats_model_RenderedBreakpoint.prototype.productElement__I__O = (function(
 $c_Lbgstats_model_RenderedBreakpoint.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
-$c_Lbgstats_model_RenderedBreakpoint.prototype.init___Lbgstats_model_Breakpoint__Z = (function(breakpoint, achieved) {
+$c_Lbgstats_model_RenderedBreakpoint.prototype.init___Lbgstats_model_Breakpoint__Lbgstats_model_Abilities = (function(breakpoint, abilities) {
   this.breakpoint$1 = breakpoint;
-  this.achieved$1 = achieved;
+  this.abilities$1 = abilities;
   return this
 });
 $c_Lbgstats_model_RenderedBreakpoint.prototype.hashCode__I = (function() {
-  var acc = (-889275714);
-  acc = $m_sr_Statics$().mix__I__I__I(acc, $m_sr_Statics$().anyHash__O__I(this.breakpoint$1));
-  acc = $m_sr_Statics$().mix__I__I__I(acc, (this.achieved$1 ? 1231 : 1237));
-  return $m_sr_Statics$().finalizeHash__I__I__I(acc, 2)
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
 });
 $c_Lbgstats_model_RenderedBreakpoint.prototype.productIterator__sc_Iterator = (function() {
   return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
