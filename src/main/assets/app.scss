@@ -1,0 +1,18 @@
+@import 'lib/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-forms
+@include foundation-table;
+
+.text-muted {
+  opacity: 0.25;
+}
+
+.negative {
+  color: red;
+}
+
+.positive {
+  color: green;
+}

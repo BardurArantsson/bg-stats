@@ -1,3 +1,4 @@
+enablePlugins(SbtWeb)
 enablePlugins(ScalaJSPlugin)
 
 name := "bg-stats"
@@ -15,7 +16,11 @@ scalacOptions := Seq(
 libraryDependencies ++= Seq(
   "io.monix" %%% "monix" % Version.monix,
   "org.scalaz" %%% "scalaz-core" % Version.scalaz,
-  "com.github.japgolly.scalajs-react" %%% "core" % Version.scalaJsReact)
+  "com.github.japgolly.scalajs-react" %%% "core" % Version.scalaJsReact,
+  // Foundation SASS
+  "org.webjars.npm" % "foundation-sites" % Version.foundationSites
+    exclude("org.webjars.npm", "jquery")
+    exclude("org.webjars.npm", "what-input"))
 
 scalaJSUseMainModuleInitializer := true
 
