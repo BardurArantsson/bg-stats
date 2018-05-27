@@ -22,16 +22,16 @@ scalaJSUseMainModuleInitializer := true
 skip in packageJSDependencies := false
 
 jsDependencies ++= Seq(
-  "org.webjars.npm" % "react" % "16.2.0"
+  "org.webjars.npm" % "react" % Version.reactJs
     /        "umd/react.development.js"
     minified "umd/react.production.min.js"
     commonJSName "React",
-  "org.webjars.npm" % "react-dom" % "16.2.0"
+  "org.webjars.npm" % "react-dom" % Version.reactJs
     /         "umd/react-dom.development.js"
     minified  "umd/react-dom.production.min.js"
     dependsOn "umd/react.development.js"
     commonJSName "ReactDOM",
-  "org.webjars.npm" % "react-dom" % "16.2.0"
+  "org.webjars.npm" % "react-dom" % Version.reactJs
     /         "umd/react-dom-server.browser.development.js"
     minified  "umd/react-dom-server.browser.production.min.js"
     dependsOn "umd/react-dom.development.js"
